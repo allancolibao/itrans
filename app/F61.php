@@ -74,4 +74,6 @@ class F61 extends Model
                 ->count();
 
     } 
+
+    
 }

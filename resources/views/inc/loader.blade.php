@@ -7,6 +7,7 @@
             <p style="display:none" id="getting" class="text-light">Getting your data...</p>
             <p style="display:none" id="transmitting"class="text-light">Transmitting data...</p>
             <p style="display:none" id="done" class="text-light">Almost done...</p>
+            <p style="display:none" id="time" class="text-light">Hold on 🙏...</p>
         </div>
     </div>
 </div>

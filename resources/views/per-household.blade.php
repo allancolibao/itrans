@@ -4,26 +4,26 @@
 @section('content') 
 
     <div class="card p-4 shadow-sm">
-        <h2 class="mb-4">Please enter a valid value</h2>
+        <h2 class="mb-4">Per household selected 🏠 Please fill out the form below 👇</h2>
 
         @include('inc.messages')
         @include('inc.loader')
-
+        
         <form method="post" action="{{ route('send')}}">
             @csrf
             <div class="form-group">
                 <label for="full_name">FULL NAME</label>
-                <input class="form-control" list="encoders" type="text" name="full_name" id="full_name" value="{{ old('full_name') }}" placeholder="JUAN DELA CRUZ" autocomplete="off">
+                <select class="form-control"  name="full_name" id="full_name">
+                    <option selected="true" disabled>PLEASE SELECT YOUR NAME</option>
+                    @foreach ($encoders as $encoder)
+                    <option value="{{$encoder['first_name'].' '.$encoder['last_name']}}" {{ (old("full_name") == $encoder['first_name'].' '.$encoder['last_name'] ? 'selected' : '') }}>{{$encoder['first_name'].' '.$encoder['last_name']}}</option>
+                    @endforeach                                         
+                </select>
                     @if ($errors->has('full_name'))
                         <span class="help-block">
                             <strong>{{ $errors->first('full_name') }}</strong>
                         </span>
                     @endif
-                <datalist id="encoders" >
-                    @foreach ($encoders as $encoder)
-                    <option>{{$encoder['first_name'].' '.$encoder['last_name']}}</option>
-                    @endforeach                                         
-                </datalist>
             </div>
 
             <div class="form-group">
