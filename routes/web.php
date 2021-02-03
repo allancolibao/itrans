@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'MainController@index')->name('home');
+Route::get('/eacode', 'MainController@perEacode')->name('eacode');
 Route::post('/send', 'MainController@send')->name('send');
+Route::post('/send/eacode', 'MainController@sendEacode')->name('send.eacode');

@@ -15,4 +15,13 @@ class F11 extends Model
         return $this->first();
 
     } 
+
+    public function getTheForm11PerEacode($eacode){
+
+        return $this->where('eacode', $eacode)
+                ->distinct()
+                ->get(['eacode','hcn','shsn'])
+                ->toArray();
+
+    }
 }

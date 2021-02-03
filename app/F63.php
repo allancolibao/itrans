@@ -122,4 +122,19 @@ class F63 extends Model
                 ->count();
 
     } 
+
+
+    public function getTheForm63PerEacode($eacode, $hcn, $shsn){
+
+        $hasData = $this->where('eacode', $eacode)
+                ->where('hcn', $hcn)
+                ->where('shsn', $shsn)
+                ->first();
+
+        if($hasData) {
+            return 1;
+        }
+
+        return 0;
+    }
 }

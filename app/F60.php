@@ -66,4 +66,6 @@ class F60 extends Model
                 ->count();
 
     } 
+
+    
 }
