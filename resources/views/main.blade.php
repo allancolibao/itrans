@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>D-ETRANS-2019</title>
+        <title>D-ETRANS-2020</title>
 
 
         <!-- Styles -->
@@ -15,7 +15,7 @@
     <body>
          <!-- Navigation -->
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-            <h5 class="my-2 mr-md-auto font-weight-normal">Dietary Transmission 2019</h5>
+            <h5 class="my-2 mr-md-auto font-weight-normal">Dietary Transmission 2020</h5>
             
         </div>
         
